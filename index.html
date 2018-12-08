@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" onkeydown="keyPressed(event.keyCode)">
 <head>
     <meta charset="UTF-8">
     <title>Владислав Чернюк</title>
@@ -34,7 +34,7 @@
                         <p class="text-info">vlad26v03@gmail.com</p>
                     </div>
                     <div class="references">
-                        <a target="_blank" class="reference" href="https://www.facebook.com/profile.php?id=100010246354597">
+                        <a target="_blank" class="reference" href="https://www.facebook.com/kofful">
                             <img alt="facebook" class="reference-img" src="./assets/img/facebook.png">
                         </a>
                         <a target="_blank" class="reference" href="https://twitter.com/Vlad26_05">
@@ -52,41 +52,56 @@
                 <p id="resume">Резюме</p>
                 <p id="developer">Java Junior Developer</p>
             </div>
+            <div class="projects">
+                <div id="left-arrow" class="arrow" onclick="keyPressed(37)">
+                    <img class="left-arrow-img" src="./assets/img/chevron.png" alt="left">
+                </div>
+                <div class="img-containers">
+                    <div class="img-container"></div>
+                    <div class="img-container"></div>
+                    <div class="img-container"></div>
+                </div>
+                <div id="right-arrow" class="arrow" onclick="keyPressed(39)">
+                    <img class="right-arrow-img" src="./assets/img/chevron.png" alt="left">
+                </div>
+            </div>
         </div>
         <div class="skillsContainer">
-            <div class="skill-container">
-                <div class="skill_header">
-                    <p class="skill-header_text">C#</p>
+            <div class="skills-container">
+                <div class="skill-container">
+                    <div class="skill_header">
+                        <p class="skill-header_text">C#</p>
+                    </div>
+                    <div class="images">
+                        <img alt="visual-studio" class="technology-image" src="./assets/img/visual-studio.jpg">
+                        <img alt="c-sharp" class="technology-image" src="./assets/img/c-sharp.png">
+                        <img alt="ado-net" class="technology-image" src="./assets/img/ado-net.jpg">
+                        <img alt="net-framework" class="technology-image" src="./assets/img/net-framework.jpg">
+                    </div>
                 </div>
-                <div class="images">
-                    <img alt="visual-studio" class="technology-image" src="./assets/img/visual-studio.jpg">
-                    <img alt="c-sharp" class="technology-image" src="./assets/img/c-sharp.png">
-                    <img alt="ado-net" class="technology-image" src="./assets/img/ado-net.jpg">
-                    <img alt="net-framework" class="technology-image" src="./assets/img/net-framework.jpg">
+                <div class="skill-container">
+                    <div class="skill_header">
+                        <p class="skill-header_text" id="programming_db">Программирование БД</p>
+                    </div>
+                    <div class="images">
+                        <img alt="mssql" class="technology-image" src="./assets/img/mssql.png">
+                        <img alt="uml" class="technology-image" src="./assets/img/uml.png">
+                    </div>
                 </div>
-            </div>
-            <div class="skill-container">
-                <div class="skill_header">
-                    <p class="skill-header_text" id="programming_db">Программирование БД</p>
-                </div>
-                <div class="images">
-                    <img alt="mssql" class="technology-image" src="./assets/img/mssql.png">
-                    <img alt="uml" class="technology-image" src="./assets/img/uml.png">
-                </div>
-            </div>
-            <div class="skill-container">
-                <div class="skill_header">
-                    <p class="skill-header_text">Web</p>
-                </div>
-                <div class="images">
-                    <img alt="html" class="technology-image" src="./assets/img/html.png">
-                    <img alt="css" class="technology-image" src="./assets/img/css.png">
-                    <img alt="js" class="technology-image" src="./assets/img/js.png">
+                <div class="skill-container">
+                    <div class="skill_header">
+                        <p class="skill-header_text">Web</p>
+                    </div>
+                    <div class="images">
+                        <img alt="html" class="technology-image" src="./assets/img/html.png">
+                        <img alt="css" class="technology-image" src="./assets/img/css.png">
+                        <img alt="js" class="technology-image" src="./assets/img/js.png">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script src="./assets/script.js"></script>
 </body>
 </html>
