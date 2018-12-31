@@ -19,20 +19,6 @@ body, html, .mainContainer {
     justify-content: center;
 }
 
-#resume {
-    color: white;
-    font-family: 'Impact', sans-serif;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#developer {
-    color: white;
-    font-family: 'Meriweather', sans-serif;
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-
 .contentContainer {
     display: flex;
     flex-direction: row;
@@ -44,10 +30,9 @@ body, html, .mainContainer {
 }
 
 .profileContainer {;
-    margin-left: 50px;
     display: flex;
-    min-width: 300px;
-    width: 200px;
+	margin-left: 50px;
+    width: 300px;
     margin-top: -150px;
     flex-direction: column;
 }
@@ -133,18 +118,20 @@ body, html, .mainContainer {
 
 .el-name {
     margin-bottom: 1px;
+	font-size: 18px;
     font-family: 'Comfortaa', cursive;
 }
 
 .text-info {
-    margin-top: 10px;
+    margin-top: 9px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .descriptionContainer {
     display: flex;
     flex-direction: column;
+	align-items: center;
     width: 100%;
     margin: 10px 50px;
     border-radius: 10px;
@@ -153,31 +140,34 @@ body, html, .mainContainer {
 }
 
 .projects {
-    margin-top: 10px;
     display: flex;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
+    margin-top: 10px;
+    width: 500px;
 }
 
 .arrow {
-    align-self: center;
+	
+    position: absolute;
     cursor: pointer;
 }
-
+#right-arrow {
+    align-self: flex-end;
+}
 .right-arrow-img {
     transform: rotate(180deg);
 }
 
 .img-containers {
-    width: 300px;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    margin: 50px;
 }
 
 .img-container {
-    min-width: 300px;
+    min-width: 500px;
     height: 300px;
     display: flex;
     cursor: pointer;
@@ -188,7 +178,7 @@ body, html, .mainContainer {
 
 .img-position {
     display: flex;
-    max-width: 300px;
+    max-width: 500px;
     max-height: 100%;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
@@ -249,7 +239,13 @@ body, html, .mainContainer {
     opacity: 1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
+    .technology-image {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1050px) and (max-width: 1250px) {
     .skills-container {
         width: 405px;
         margin-left: -350px;
@@ -263,16 +259,12 @@ body, html, .mainContainer {
     .descriptionContainer {
         margin-right: 50px;
     }
-
+	
     .skill-container {
         width: 400px;
         margin-left: 350px;
         box-shadow: none;
         transition: all 1s ease;
-    }
-
-    .technology-image {
-        opacity: 1;
     }
 
     .skillsContainer:hover .profileContainer {
@@ -289,9 +281,36 @@ body, html, .mainContainer {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1050px) {
+	.profileContainer {	
+		margin-left: 0px;
+	}
+.contentContainer {
+	flex-direction: column;
+	align-items: center;
+}
+.descriptionContainer {
+	width: 500px;
+}
+.skillsContainer {
+	max-width: 500px;	
+	width: 500px;
+}
+.skill-container {
+	margin-right: 0px;
+}
+}
 
-    .profileContainer {
-        display: none;
-    }
+@media (min-width: 700px) and (max-width:1050px) {
+	.profileContainer {
+		flex-direction: row;
+		width: 650px;		
+	}
+	.profilePicture {
+		border-radius: 25px 0px 0px 25px;
+	}
+	.shortDescription {
+		border-radius: 0px 25px 25px 0px;
+		margin-top: 0px;
+	}
 }
